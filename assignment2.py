@@ -200,17 +200,17 @@ That being said, I played around with the code below a lot but was unable to pro
 
 """The below nltk import was derived from https://www.nltk.org/howto/sentiment.html"""
 
-forsentimentanalysis=[theprestige, trollhunter, thecube, rogueone, nightcrawler, blackmirror, obrotherwhereartthou, kuboandthetwostrings, thebigshort, tuckeranddale, arresteddevelopment]
-import nltk
-nltk.download('vader_lexicon')
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-sentimentscore = []
-for item in forsentimentanalysis:
-    sentimentscore.append(SentimentIntensityAnalyzer().polarity_scores(item))
+#forsentimentanalysis=[theprestige, trollhunter, thecube, rogueone, nightcrawler, blackmirror, obrotherwhereartthou, kuboandthetwostrings, thebigshort, tuckeranddale, arresteddevelopment]
+#import nltk
+#nltk.download('vader_lexicon')
+#from nltk.sentiment.vader import SentimentIntensityAnalyzer
+#sentimentscore = []
+#for item in forsentimentanalysis:
+    #sentimentscore.append(SentimentIntensityAnalyzer().polarity_scores(item))
 
-""" I used the zip function to make a dictionary with movies and their corresponding sentiment scores"""
+#""" I used the zip function to make a dictionary with movies and their corresponding sentiment scores"""
 
-sentimentscore_dictionary = dict(zip(newlistfor_wikipedia,sentimentscore))
+#sentimentscore_dictionary = dict(zip(newlistfor_wikipedia,sentimentscore))
 
 #print("Here are the sentiment scores for the movies as per the first review for each movie on IMDB")
 
@@ -227,8 +227,8 @@ def main():
     print('Still unsure what to watch? Here are the genres that the movies can fall under:')
     pprint.pprint(movie_genre_dictionary)
 
-    print("Here are the sentiment scores for the movies as per the first review for each movie on IMDB")
-    print(sentimentscore_dictionary)
+    #print("Here are the sentiment scores for the movies as per the first review for each movie on IMDB")
+    #print(sentimentscore_dictionary)
 
 
 if __name__ == "__main__":
